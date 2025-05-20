@@ -34,17 +34,38 @@
       color: #00ff99;
       font-weight: bold;
     }
-    .gallery {
+    .services {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+    .service {
+      background-color: #111111;
+      border: 1px solid #00ff99;
+      border-radius: 12px;
+      width: 300px;
       padding: 20px;
     }
-    .gallery img {
-      width: 280px;
-      border-radius: 12px;
-      border: 2px solid #00ff99;
+    .service img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .service h3 {
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .service p {
+      font-size: 1em;
+      color: #cccccc;
+    }
+    .final-message {
+      margin: 40px 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #00ff99;
     }
   </style>
 </head>
@@ -54,15 +75,32 @@
     <h1>ArsenonTech</h1>
     <p>Manutenção, conserto e serviços de informática em geral</p>
     <div class="links">
+      <a href="https://www.facebook.com/profile.php?id=61569207737432" target="_blank">Facebook</a>
       <a href="https://www.instagram.com/arsenontechrs" target="_blank">Instagram</a>
       <a href="https://wa.me/5551990124816" target="_blank">WhatsApp</a>
     </div>
   </header>
 
-  <section class="gallery">
-    <img src="https://i.imgur.com/O2bQZ0A.jpeg" alt="Serviço 1">
-    <img src="https://i.imgur.com/Z6qd2Oz.jpeg" alt="Serviço 2">
-    <img src="https://i.imgur.com/sq4mU5R.jpeg" alt="Serviço 3">
+  <section class="services">
+    <div class="service">
+      <img src="https://i.imgur.com/tV7QyQa.jpg" alt="Manutenção Preventiva">
+      <h3>Manutenção Preventiva</h3>
+      <p>Ajuda no combate a adversidades decorrentes do tempo de uso do aparelho, melhorando desempenho e aumentando a vida útil.</p>
+    </div>
+    <div class="service">
+      <img src="https://i.imgur.com/XrNURVb.jpg" alt="Troca de Componentes">
+      <h3>Troca de Componentes</h3>
+      <p>Serviço especializado para substituir peças danificadas e restaurar o funcionamento do seu computador com segurança.</p>
+    </div>
+    <div class="service">
+      <img src="https://i.imgur.com/7aCvco1.jpg" alt="Upgrade de Desempenho">
+      <h3>Upgrade de Desempenho</h3>
+      <p>Aumente a potência e a velocidade do seu computador com atualizações de hardware sob medida para suas necessidades.</p>
+    </div>
   </section>
+
+  <div class="final-message">
+    Pra qualquer "problema" existe uma solução, consulte-nos!
+  </div>
 </body>
 </html>
