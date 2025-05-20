@@ -3,22 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArsenonTech</title>
+  <title>ArsenonTech | Assistência Técnica de Informática</title>
   <style>
     body {
-      background-color: #0f0f0f;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #000000;
+      color: #00ff99;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
-      padding: 50px;
+    }
+    header {
+      padding: 40px 20px 20px;
+    }
+    header img {
+      width: 120px;
+      border-radius: 50%;
     }
     h1 {
+      color: #ffffff;
+      margin: 10px 0;
+    }
+    p {
+      color: #cccccc;
+      font-size: 1.2em;
+      margin: 10px 0 30px;
+    }
+    .links a {
+      margin: 0 10px;
+      text-decoration: none;
       color: #00ff99;
+      font-weight: bold;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 280px;
+      border-radius: 12px;
+      border: 2px solid #00ff99;
     }
   </style>
 </head>
 <body>
-  <h1>Bem-vindo à ArsenonTech</h1>
-  <p>Manutenção, conserto e serviços de informática em geral</p>
+  <header>
+    <img src="https://avatars.githubusercontent.com/u/17403045?v=4" alt="Logo ArsenonTech">
+    <h1>ArsenonTech</h1>
+    <p>Manutenção, conserto e serviços de informática em geral</p>
+    <div class="links">
+      <a href="https://www.instagram.com/arsenontechrs" target="_blank">Instagram</a>
+      <a href="https://wa.me/5551990124816" target="_blank">WhatsApp</a>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <img src="https://i.imgur.com/O2bQZ0A.jpeg" alt="Serviço 1">
+    <img src="https://i.imgur.com/Z6qd2Oz.jpeg" alt="Serviço 2">
+    <img src="https://i.imgur.com/sq4mU5R.jpeg" alt="Serviço 3">
+  </section>
 </body>
 </html>
