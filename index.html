@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ArsenonTech | Assistência Técnica de Informática</title>
   <link rel="icon" type="image/png" href="https://github.com/exodiaAr/Arsenon/blob/main/logo%20transpa%202.png?raw=true">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
@@ -30,15 +32,14 @@
       margin: 10px 0 30px;
     }
     .links a {
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       color: #00ff99;
-      font-weight: bold;
+      font-size: 1.5em;
     }
     .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
       padding: 40px 20px;
     }
@@ -46,8 +47,13 @@
       background-color: #111111;
       border: 1px solid #00ff99;
       border-radius: 12px;
-      width: 300px;
       padding: 20px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .service:hover {
+      transform: scale(1.05);
+      background-color: #0f1f1a;
     }
     .service img {
       width: 100%;
@@ -68,6 +74,28 @@
       font-weight: bold;
       color: #00ff99;
     }
+    .swiper {
+      width: 100%;
+      padding: 20px 0;
+    }
+    .swiper-slide {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      color: #0f0;
+      font-size: 1em;
+      margin: 0 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+    a.service-link {
+      color: inherit;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -76,32 +104,72 @@
     <h1>ArsenonTech</h1>
     <p>Manutenção, conserto e serviços de informática em geral</p>
     <div class="links">
-      <a href="https://www.facebook.com/profile.php?id=61569207737432" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/arsenontechrs" target="_blank">Instagram</a>
-      <a href="https://wa.me/5551990124816" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/profile.php?id=61569207737432" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/arsenontechrs" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5551990124816" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </header>
 
   <section class="services">
-    <div class="service">
-      <img src="https://github.com/exodiaAr/Arsenon/blob/main/20250111_070222.jpg?raw=true" alt="Manutenção Preventiva">
-      <h3>Manutenção Preventiva</h3>
-      <p>Ajuda no combate a adversidades decorrentes do tempo de uso do aparelho, melhorando desempenho e aumentando a vida útil.</p>
-    </div>
-    <div class="service">
-      <img src="https://github.com/exodiaAr/Arsenon/blob/main/ChatGPT%20Image%2020%20de%20mai.%20de%202025,%2020_40_02.png?raw=true" alt="Troca de Componentes">
-      <h3>Troca de Componentes</h3>
-      <p>Serviço especializado para substituir peças danificadas e restaurar o funcionamento do seu computador com segurança.</p>
-    </div>
-    <div class="service">
-      <img src="https://github.com/exodiaAr/Arsenon/blob/main/ChatGPT%20Image%2020%20de%20mai.%20de%202025,%2020_50_27.png?raw=true" alt="Upgrade de Desempenho">
-      <h3>Upgrade de Desempenho</h3>
-      <p>Aumente a potência e a velocidade do seu computador com atualizações de hardware sob medida para suas necessidades.</p>
-    </div>
+    <a href="https://wa.me/5551990124816" class="service-link">
+      <div class="service">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/20250111_070222.jpg?raw=true" alt="Manutenção Preventiva">
+        <h3>🛠️ Manutenção Preventiva</h3>
+        <p>Ajuda no combate a adversidades decorrentes do tempo de uso do aparelho, melhorando desempenho e aumentando a vida útil.</p>
+      </div>
+    </a>
+    <a href="https://wa.me/5551990124816" class="service-link">
+      <div class="service">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/ChatGPT%20Image%2020%20de%20mai.%20de%202025,%2020_40_02.png?raw=true" alt="Troca de Componentes">
+        <h3>🔧 Troca de Componentes</h3>
+        <p>Serviço especializado para substituir peças danificadas e restaurar o funcionamento do seu computador com segurança.</p>
+      </div>
+    </a>
+    <a href="https://wa.me/5551990124816" class="service-link">
+      <div class="service">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/ChatGPT%20Image%2020%20de%20mai.%20de%202025,%2020_50_27.png?raw=true" alt="Upgrade de Desempenho">
+        <h3>🚀 Upgrade de Desempenho</h3>
+        <p>Aumente a potência e a velocidade do seu computador com atualizações de hardware sob medida para suas necessidades.</p>
+      </div>
+    </a>
+    <a href="https://wa.me/5551990124816" class="service-link">
+      <div class="service">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/ChatGPT%20Image%2016%20de%20jul.%20de%202025,%2016_41_52.png?raw=true" alt="Suporte Remoto">
+        <h3>💻 Suporte Remoto</h3>
+        <p>Resolvemos lentidão, travamentos, mensagens de erro, vírus e outros problemas de forma rápida e à distância com segurança e garantia via AnyDesk.</p>
+      </div>
+    </a>
   </section>
+
+  <h2 style="color: #0f0;">📍 Localização</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d870.4156933531792!2d-51.1806!3d-30.0362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x2f4e0f061dcaef8e!2sArsenonTech!5e0!3m2!1spt-BR!2sbr!4v1721140000000" allowfullscreen="" loading="lazy"></iframe>
+
+  <h2 style="margin-top: 40px; color: #0f0;">⭐ Avaliações de Clientes</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">"Atendimento excelente, meu notebook está novo!"</div>
+      <div class="swiper-slide">"Recomendo demais, serviço remoto rápido e eficiente."</div>
+      <div class="swiper-slide">"Fiz upgrade e agora roda tudo liso!"</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:10px;">
+    <a href="https://g.co/kgs/KcEbfpL" target="_blank">Ver avaliações no Google</a>
+  </div>
 
   <div class="final-message">
     Pra qualquer "problema" existe uma solução, consulte-nos!
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+    });
+  </script>
 </body>
 </html>
