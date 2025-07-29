@@ -58,11 +58,6 @@
       width: 100%;
       border-radius: 8px;
       margin-bottom: 15px;
-      filter: blur(8px);
-      transition: filter 0.5s ease;
-    }
-    .service img.loaded {
-      filter: blur(0);
     }
     .service h3 {
       color: #ffffff;
@@ -121,28 +116,28 @@
   <section class="services">
     <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20manutenção%20preventiva%20no%20meu%20computador." class="service-link" target="_blank">
       <div class="service">
-        <img src="https://github.com/exodiaAr/Arsenon/blob/main/sujo.jpg?raw=true" data-src="https://github.com/exodiaAr/Arsenon/blob/main/sujo.jpg?raw=true" alt="Manutenção Preventiva" loading="lazy">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/sujo.jpg?raw=true" alt="Manutenção Preventiva" loading="lazy">
         <h3>🛠️ Manutenção Preventiva</h3>
         <p>Ajuda no combate a adversidades decorrentes do tempo de uso do aparelho, melhorando desempenho e aumentando a vida útil.</p>
       </div>
     </a>
     <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20informações%20sobre%20troca%20de%20componentes%20no%20meu%20PC." class="service-link" target="_blank">
       <div class="service">
-        <img src="https://github.com/exodiaAr/Arsenon/blob/main/componentes.png?raw=true" data-src="https://github.com/exodiaAr/Arsenon/blob/main/componentes.png?raw=true" alt="Troca de Componentes" loading="lazy">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/componentes.png?raw=true" alt="Troca de Componentes" loading="lazy">
         <h3>🔧 Troca de Componentes</h3>
         <p>Serviço especializado para substituir peças danificadas e restaurar o funcionamento do seu computador com segurança.</p>
       </div>
     </a>
     <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20fazer%20um%20upgrade%20de%20desempenho%20no%20meu%20PC.%20Podem%20me%20ajudar?" class="service-link" target="_blank">
       <div class="service">
-        <img src="https://github.com/exodiaAr/Arsenon/blob/main/upgrade.png?raw=true" data-src="https://github.com/exodiaAr/Arsenon/blob/main/upgrade.png?raw=true" alt="Upgrade de Desempenho" loading="lazy">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/upgrade.png?raw=true" alt="Upgrade de Desempenho" loading="lazy">
         <h3>🚀 Upgrade de Desempenho</h3>
         <p>Aumente a potência e a velocidade do seu computador com atualizações de hardware sob medida para suas necessidades.</p>
       </div>
     </a>
     <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20suporte%20remoto%20para%20resolver%20problemas%20no%20meu%20computador." class="service-link" target="_blank">
       <div class="service">
-        <img src="https://github.com/exodiaAr/Arsenon/blob/main/Servi%C3%A7o%20remoto.png?raw=true" data-src="https://github.com/exodiaAr/Arsenon/blob/main/Servi%C3%A7o%20remoto.png?raw=true" alt="Suporte Remoto" loading="lazy">
+        <img src="https://github.com/exodiaAr/Arsenon/blob/main/Servi%C3%A7o%20remoto.png?raw=true" alt="Suporte Remoto" loading="lazy">
         <h3>💻 Suporte Remoto</h3>
         <p>Resolvemos lentidão, travamentos, mensagens de erro, vírus e outros problemas de forma rápida e à distância com segurança e garantia via AnyDesk.</p>
       </div>
@@ -177,21 +172,5 @@
   <div class="final-message">
     Pra qualquer "problema" existe uma solução, consulte-nos!
   </div>
-
-  <script>
-    // Remove o desfoque e aplica loading progressivo nas imagens
-    document.addEventListener("DOMContentLoaded", () => {
-      const images = document.querySelectorAll(".service img");
-      images.forEach((img) => {
-        const highResSrc = img.getAttribute("data-src");
-        const tempImg = new Image();
-        tempImg.src = highResSrc;
-        tempImg.onload = () => {
-          img.src = highResSrc;
-          img.classList.add("loaded");
-        };
-      });
-    });
-  </script>
 </body>
 </html>
