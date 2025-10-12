@@ -6,6 +6,7 @@
   <title>ArsenonTech | Assistência Técnica de Informática</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/l2XGs9U.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -14,31 +15,39 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
     }
+
     header {
       padding: 40px 20px 20px;
     }
+
     header img {
       width: 120px;
       border-radius: 50%;
     }
+
     h1, h2 {
       color: #fff;
     }
+
     p {
       color: #ccc;
     }
+
     .links a {
       margin: 0 15px;
       text-decoration: none;
       color: #00ff99;
       font-size: 1.5em;
     }
+
+    /* Serviços */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
       padding: 40px 20px;
     }
+
     .service {
       background-color: #111;
       border: 1px solid #00ff99;
@@ -47,24 +56,23 @@
       transition: transform 0.3s;
       cursor: pointer;
     }
+
     .service:hover {
       transform: scale(1.05);
       background-color: #0f1f1a;
     }
+
     .service img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 15px;
     }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 10px;
-    }
+
+    /* Avaliações */
     .review-section {
       margin: 50px 20px;
     }
+
     .review {
       background-color: #111;
       border: 1px solid #00ff99;
@@ -75,9 +83,11 @@
       color: #ccc;
       text-align: left;
     }
+
     .review strong {
       color: #00ff99;
     }
+
     .review-button {
       display: inline-block;
       margin-top: 15px;
@@ -89,41 +99,83 @@
       font-weight: bold;
       transition: background 0.3s;
     }
+
     .review-button:hover {
       background-color: #00995c;
     }
+
+    /* FAQ aprimorado */
     .faq-section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       background-color: #0a0a0a;
     }
-    .faq {
+
+    .faq-section h2 {
+      color: #0f0;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .faq-section p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .faq-container {
       max-width: 800px;
       margin: 0 auto;
       text-align: left;
     }
-    details {
-      background-color: #111;
+
+    .faq-item {
+      background-color: #112d1a;
       border: 1px solid #00ff99;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-bottom: 15px;
-      padding: 15px;
+      padding: 18px 20px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: all 0.25s ease-in-out;
     }
-    details:hover {
-      background-color: #0f1f1a;
+
+    .faq-item:hover {
+      background-color: #1c4d2c;
+      transform: translateY(-2px);
     }
-    summary {
+
+    .faq-item.open {
+      background-color: #163a24;
+      border-color: #00ff99;
+    }
+
+    .faq-question {
       font-size: 1.1em;
-      color: #00ff99;
       font-weight: bold;
-      outline: none;
+      color: #00ff99;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    details p {
+
+    .faq-answer {
+      display: none;
       margin-top: 10px;
-      color: #ccc;
+      line-height: 1.6;
       font-size: 1em;
+      color: #ccc;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 10px;
+      animation: fadeIn 0.3s ease-in-out;
     }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .contact-btn {
       display: inline-block;
       background-color: #006b46;
@@ -133,10 +185,20 @@
       text-decoration: none;
       font-weight: bold;
       margin-top: 8px;
+      transition: background 0.3s;
     }
+
     .contact-btn:hover {
       background-color: #00995c;
     }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 10px;
+    }
+
     .final-message {
       margin: 40px 20px;
       font-size: 1.5em;
@@ -145,6 +207,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <img src="https://i.imgur.com/FZ769Ao.png" alt="Logo ArsenonTech">
@@ -158,28 +221,31 @@
   </header>
 
   <section class="services">
-    <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20manutenção%20preventiva%20no%20meu%20computador." class="service-link" target="_blank">
+    <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20manutenção%20preventiva%20no%20meu%20computador." target="_blank">
       <div class="service">
         <img src="https://i.imgur.com/US39VGf.jpeg" loading="lazy">
         <h3>🛠️ Manutenção Preventiva</h3>
         <p>Combate problemas causados pelo tempo de uso, melhora o desempenho e aumenta a vida útil do equipamento.</p>
       </div>
     </a>
-    <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20informações%20sobre%20troca%20de%20componentes%20no%20meu%20PC." class="service-link" target="_blank">
+
+    <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20informações%20sobre%20troca%20de%20componentes%20no%20meu%20PC." target="_blank">
       <div class="service">
         <img src="https://i.imgur.com/KK0zg2G.png" alt="Troca de Componentes" loading="lazy">
         <h3>🔧 Troca de Componentes</h3>
         <p>Substituímos peças danificadas de forma segura, restaurando o funcionamento ideal do seu computador.</p>
       </div>
     </a>
-    <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20fazer%20um%20upgrade%20de%20desempenho%20no%20meu%20PC.%20Podem%20me%20ajudar?" class="service-link" target="_blank">
+
+    <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20fazer%20um%20upgrade%20de%20desempenho%20no%20meu%20PC.%20Podem%20me%20ajudar?" target="_blank">
       <div class="service">
         <img src="https://i.imgur.com/Xz8lxzt.png" alt="Upgrade de Desempenho" loading="lazy">
         <h3>🚀 Upgrade de Desempenho</h3>
         <p>Aumente a potência e a velocidade do seu computador com upgrades de hardware sob medida.</p>
       </div>
     </a>
-    <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20suporte%20remoto%20para%20resolver%20problemas%20no%20meu%20computador." class="service-link" target="_blank">
+
+    <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20suporte%20remoto%20para%20resolver%20problemas%20no%20meu%20computador." target="_blank">
       <div class="service">
         <img src="https://i.imgur.com/cC0NTHy.png" alt="Suporte Remoto" loading="lazy">
         <h3>💻 Suporte Remoto</h3>
@@ -188,38 +254,49 @@
     </a>
   </section>
 
+  <!-- FAQ NOVO -->
   <section class="faq-section">
     <h2>❓ FAQ</h2>
-    <p style="color:#ccc; margin-bottom:25px;">Perguntas Frequentes</p>
-    <div class="faq">
-      <details>
-        <summary>Vocês consertam todo tipo de notebook ou PC?</summary>
-        <p>Sim. Atendemos todas as marcas de notebooks e computadores, incluindo PCs Gamer, com diagnóstico especializado.</p>
-      </details>
-      <details>
-        <summary>Quanto tempo leva o conserto?</summary>
-        <p>Buscamos sempre combinar agilidade com qualidade, para entregar o melhor resultado. Cada serviço tem suas particularidades e prazos diferentes. Não confie em assistências que prometem resolver tudo em “20 minutos”. Como diz o ditado: “A pressa é inimiga da perfeição”.</p>
-      </details>
-      <details>
-        <summary>Os serviços têm garantia?</summary>
-        <p>Sim, todos os serviços possuem garantia de 7 dias.</p>
-      </details>
-      <details>
-        <summary>É preciso agendar?</summary>
-        <p>Sim. Os atendimentos são realizados mediante agendamento pelo nosso WhatsApp ou Instagram.</p>
-        <a class="contact-btn" href="https://wa.me/5551990124816" target="_blank">Fale Conosco</a>
-      </details>
-      <details>
-        <summary>Como saber se o computador precisa de limpeza?</summary>
-        <p>Se o computador estiver esquentando demais, com ventoinhas barulhentas, lentidão repentina ou desligando sozinho, são sinais claros de acúmulo de poeira ou pasta térmica ressecada. A limpeza preventiva evita danos e melhora o desempenho térmico.</p>
-      </details>
-      <details>
-        <summary>Formas de pagamento?</summary>
-        <p>Aceitamos Dinheiro, PIX e Cartões de crédito ou débito.</p>
-      </details>
+    <p>Perguntas Frequentes</p>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <div class="faq-question">Vocês consertam todo tipo de notebook ou PC?</div>
+        <div class="faq-answer">Sim. Atendemos todas as marcas de notebooks e computadores, incluindo PCs Gamer, com diagnóstico especializado.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Quanto tempo leva o conserto?</div>
+        <div class="faq-answer">Buscamos sempre combinar agilidade com qualidade. Cada serviço tem suas particularidades e prazos diferentes. Não confie em assistências que prometem resolver tudo em “20 minutos”.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Os serviços têm garantia?</div>
+        <div class="faq-answer">Sim, todos os serviços possuem garantia de 7 dias.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">É preciso agendar?</div>
+        <div class="faq-answer">
+          Sim. Os atendimentos são realizados mediante agendamento pelo nosso WhatsApp ou Instagram.  
+          <br><a class="contact-btn" href="https://wa.me/5551990124816" target="_blank">Fale Conosco</a>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Como saber se o computador precisa de limpeza?</div>
+        <div class="faq-answer">Se o computador estiver esquentando demais, com ventoinhas barulhentas, lentidão repentina ou desligando sozinho, são sinais claros de acúmulo de poeira ou pasta térmica ressecada. A limpeza preventiva evita danos e melhora o desempenho térmico.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Formas de pagamento?</div>
+        <div class="faq-answer">Aceitamos Dinheiro, PIX e Cartões de crédito ou débito.</div>
+      </div>
     </div>
   </section>
 
+  <!-- Avaliações -->
   <section class="review-section">
     <h2 style="color:#0f0;">⭐ Avaliações de Clientes</h2>
     <div id="reviews" style="margin: 20px auto; max-width: 600px; font-size: 1.2em; color: #ccc;"></div>
@@ -234,6 +311,14 @@
   </div>
 
   <script>
+    // Interatividade do FAQ
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+
+    // Avaliações automáticas
     const reviews = [
       "Excelente atendimento!",
       "Resolveram tudo à distância e super rápido.",
