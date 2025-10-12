@@ -56,7 +56,6 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
       padding: 40px 20px;
-      margin: 50px 0;
     }
 
     .service {
@@ -114,10 +113,8 @@
       background-color: #00995c;
     }
 
-    /* FAQ com mesmo espaçamento padrão das outras seções */
     .faq-section {
-      padding: 40px 20px;
-      margin: 50px 0;
+      padding: 50px 20px;
       background-color: #0a0a0a;
     }
 
@@ -208,11 +205,10 @@
       height: 400px;
       border: 0;
       border-radius: 10px;
-      margin-bottom: 50px;
     }
 
     .final-message {
-      margin: 50px 20px;
+      margin: 40px 20px;
       font-size: 1.5em;
       font-weight: bold;
       color: #00ff99;
@@ -276,7 +272,7 @@
   <h2 style="color:#0f0;">📍 Localização</h2>
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d870.4156933531792!2d-51.1806!3d-30.0362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x2f4e0f061dcaef8e!2sArsenonTech!5e0!3m2!1spt-BR!2sbr!4v1721140000000" allowfullscreen="" loading="lazy"></iframe>
 
-  <!-- FAQ -->
+  <!-- FAQ movido para abaixo da localização -->
   <section class="faq-section">
     <h2>❓ FAQ</h2>
     <p>Perguntas Frequentes</p>
@@ -322,14 +318,12 @@
   </div>
 
   <script>
-    // Interatividade do FAQ
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', () => {
         item.classList.toggle('open');
       });
     });
 
-    // Avaliações automáticas
     const reviews = [
       "Excelente atendimento!",
       "Resolveram tudo à distância e super rápido.",
