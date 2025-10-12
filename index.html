@@ -9,7 +9,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #000000;
+      background-color: #000;
       color: #00ff99;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
@@ -21,14 +21,11 @@
       width: 120px;
       border-radius: 50%;
     }
-    h1 {
-      color: #ffffff;
-      margin: 10px 0;
+    h1, h2 {
+      color: #fff;
     }
     p {
-      color: #cccccc;
-      font-size: 1.2em;
-      margin: 10px 0 30px;
+      color: #ccc;
     }
     .links a {
       margin: 0 15px;
@@ -43,7 +40,7 @@
       padding: 40px 20px;
     }
     .service {
-      background-color: #111111;
+      background-color: #111;
       border: 1px solid #00ff99;
       border-radius: 12px;
       padding: 20px;
@@ -59,29 +56,14 @@
       border-radius: 8px;
       margin-bottom: 15px;
     }
-    .service h3 {
-      color: #ffffff;
-      margin-bottom: 10px;
-    }
-    .service p {
-      font-size: 1em;
-      color: #cccccc;
-    }
-    .final-message {
-      margin: 40px 20px;
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #00ff99;
-    }
-    a.service-link {
-      color: inherit;
-      text-decoration: none;
-    }
     iframe {
       width: 100%;
-      height: 300px;
+      height: 400px;
       border: 0;
       border-radius: 10px;
+    }
+    .review-section {
+      margin: 50px 20px;
     }
     .review {
       background-color: #111;
@@ -93,10 +75,72 @@
       color: #ccc;
       text-align: left;
     }
-    .review p {
-      margin: 5px 0;
-    }
     .review strong {
+      color: #00ff99;
+    }
+    .review-button {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #00b36b;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .review-button:hover {
+      background-color: #00995c;
+    }
+    .faq-section {
+      padding: 40px 20px;
+      background-color: #0a0a0a;
+    }
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    details {
+      background-color: #111;
+      border: 1px solid #00ff99;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      padding: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    details:hover {
+      background-color: #0f1f1a;
+    }
+    summary {
+      font-size: 1.1em;
+      color: #00ff99;
+      font-weight: bold;
+      outline: none;
+    }
+    details p {
+      margin-top: 10px;
+      color: #ccc;
+      font-size: 1em;
+    }
+    .contact-btn {
+      display: inline-block;
+      background-color: #006b46;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .contact-btn:hover {
+      background-color: #00995c;
+    }
+    .final-message {
+      margin: 40px 20px;
+      font-size: 1.5em;
+      font-weight: bold;
       color: #00ff99;
     }
   </style>
@@ -118,37 +162,77 @@
       <div class="service">
         <img src="https://i.imgur.com/US39VGf.jpeg" loading="lazy">
         <h3>🛠️ Manutenção Preventiva</h3>
-        <p>Ajuda no combate a adversidades decorrentes do tempo de uso do aparelho, melhorando desempenho e aumentando a vida útil.</p>
+        <p>Combate problemas causados pelo tempo de uso, melhora o desempenho e aumenta a vida útil do equipamento.</p>
       </div>
     </a>
     <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20informações%20sobre%20troca%20de%20componentes%20no%20meu%20PC." class="service-link" target="_blank">
       <div class="service">
         <img src="https://i.imgur.com/KK0zg2G.png" alt="Troca de Componentes" loading="lazy">
         <h3>🔧 Troca de Componentes</h3>
-        <p>Serviço especializado para substituir peças danificadas e restaurar o funcionamento do seu computador com segurança.</p>
+        <p>Substituímos peças danificadas de forma segura, restaurando o funcionamento ideal do seu computador.</p>
       </div>
     </a>
     <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20fazer%20um%20upgrade%20de%20desempenho%20no%20meu%20PC.%20Podem%20me%20ajudar?" class="service-link" target="_blank">
       <div class="service">
         <img src="https://i.imgur.com/Xz8lxzt.png" alt="Upgrade de Desempenho" loading="lazy">
         <h3>🚀 Upgrade de Desempenho</h3>
-        <p>Aumente a potência e a velocidade do seu computador com atualizações de hardware sob medida para suas necessidades.</p>
+        <p>Aumente a potência e a velocidade do seu computador com upgrades de hardware sob medida.</p>
       </div>
     </a>
     <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20suporte%20remoto%20para%20resolver%20problemas%20no%20meu%20computador." class="service-link" target="_blank">
       <div class="service">
         <img src="https://i.imgur.com/cC0NTHy.png" alt="Suporte Remoto" loading="lazy">
         <h3>💻 Suporte Remoto</h3>
-        <p>Resolvemos lentidão, travamentos, mensagens de erro, vírus e outros problemas de forma rápida e à distância com segurança e garantia via AnyDesk.</p>
+        <p>Resolvemos lentidão, travamentos, vírus e outros problemas de forma rápida, segura e à distância via AnyDesk.</p>
       </div>
     </a>
   </section>
 
-  <h2 style="color: #0f0;">📍 Localização</h2>
+  <section class="faq-section">
+    <h2>❓ FAQ</h2>
+    <p style="color:#ccc; margin-bottom:25px;">Perguntas Frequentes</p>
+    <div class="faq">
+      <details>
+        <summary>Vocês consertam todo tipo de notebook ou PC?</summary>
+        <p>Sim. Atendemos todas as marcas de notebooks e computadores, incluindo PCs Gamer, com diagnóstico especializado.</p>
+      </details>
+      <details>
+        <summary>Quanto tempo leva o conserto?</summary>
+        <p>Buscamos sempre combinar agilidade com qualidade, para entregar o melhor resultado. Cada serviço tem suas particularidades e prazos diferentes. Não confie em assistências que prometem resolver tudo em “20 minutos”. Como diz o ditado: “A pressa é inimiga da perfeição”.</p>
+      </details>
+      <details>
+        <summary>Os serviços têm garantia?</summary>
+        <p>Sim, todos os serviços possuem garantia de 7 dias.</p>
+      </details>
+      <details>
+        <summary>É preciso agendar?</summary>
+        <p>Sim. Os atendimentos são realizados mediante agendamento pelo nosso WhatsApp ou Instagram.</p>
+        <a class="contact-btn" href="https://wa.me/5551990124816" target="_blank">Fale Conosco</a>
+      </details>
+      <details>
+        <summary>Como saber se o computador precisa de limpeza?</summary>
+        <p>Se o computador estiver esquentando demais, com ventoinhas barulhentas, lentidão repentina ou desligando sozinho, são sinais claros de acúmulo de poeira ou pasta térmica ressecada. A limpeza preventiva evita danos e melhora o desempenho térmico.</p>
+      </details>
+      <details>
+        <summary>Formas de pagamento?</summary>
+        <p>Aceitamos Dinheiro, PIX e Cartões de crédito ou débito.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="review-section">
+    <h2 style="color:#0f0;">⭐ Avaliações de Clientes</h2>
+    <div id="reviews" style="margin: 20px auto; max-width: 600px; font-size: 1.2em; color: #ccc;"></div>
+    <a href="https://www.google.com/search?q=ArsenonTech+Coment%C3%A1rios" target="_blank" class="review-button">Ver todas as avaliações</a>
+  </section>
+
+  <h2 style="color:#0f0;">📍 Localização</h2>
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d870.4156933531792!2d-51.1806!3d-30.0362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x2f4e0f061dcaef8e!2sArsenonTech!5e0!3m2!1spt-BR!2sbr!4v1721140000000" allowfullscreen="" loading="lazy"></iframe>
 
-  <h2 style="margin-top: 40px; color: #0f0;">⭐ Avaliações de Clientes</h2>
-  <div id="reviews" style="margin: 20px auto; max-width: 600px; font-size: 1.2em; color: #ccc;"></div>
+  <div class="final-message">
+    Pra qualquer "problema" existe uma solução, consulte-nos!
+  </div>
+
   <script>
     const reviews = [
       "Excelente atendimento!",
@@ -164,13 +248,5 @@
     showNextReview();
     setInterval(showNextReview, 3000);
   </script>
-
-  <div style="text-align:center;margin-top:10px;">
-    <a href="https://www.google.com/search?q=ArsenonTech+Coment%C3%A1rios" target="_blank">🔗 Ver todas no Google</a>
-  </div>
-
-  <div class="final-message">
-    Pra qualquer "problema" existe uma solução, consulte-nos!
-  </div>
 </body>
 </html>
