@@ -63,6 +63,20 @@
       color: #fff;
     }
 
+    /* ===== ÍCONE DO MENU (MOBILE) ===== */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 15px;
+      right: 25px;
+      z-index: 1100;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #00ff99;
+      font-size: 1.8em;
+    }
+
     /* ===== REDES FIXAS LATERAIS ===== */
     .social-fixed {
       position: fixed;
@@ -262,10 +276,51 @@
       background-color: #00cc7a;
       transform: scale(1.1);
     }
+
+    /* ======= RESPONSIVO ======= */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        border-radius: 10px;
+        padding: 10px 0;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px 20px;
+        display: block;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .social-fixed {
+        left: 8px;
+        gap: 10px;
+      }
+
+      .social-fixed a {
+        font-size: 1.2em;
+        width: 34px;
+        height: 34px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- Botão menu mobile -->
+  <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+
   <!-- Redes fixas -->
   <div class="social-fixed">
     <a href="https://www.facebook.com/profile.php?id=61569207737432" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
@@ -384,14 +439,14 @@
   <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
   <script>
-    // FAQ abrir/fechar
+    // ===== FAQ abrir/fechar =====
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', () => {
         item.classList.toggle('open');
       });
     });
 
-    // Troca de avaliações
+    // ===== Troca de avaliações =====
     const reviews = [
       "Excelente atendimento!",
       "Resolveram tudo à distância e super rápido.",
@@ -406,12 +461,19 @@
     showNextReview();
     setInterval(showNextReview, 3000);
 
-    // Botão voltar ao topo
+    // ===== Botão voltar ao topo =====
     const backToTop = document.getElementById("backToTop");
     window.addEventListener("scroll", () => {
       backToTop.style.display = window.scrollY > 400 ? "block" : "none";
     });
     backToTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // ===== Menu mobile =====
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("show");
+    });
   </script>
 </body>
 </html>
