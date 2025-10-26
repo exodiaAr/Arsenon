@@ -20,69 +20,66 @@
       text-align: center;
     }
 
-    /* ---------- MENU SUPERIOR ---------- */
+    /* ===================== MENU SUPERIOR ===================== */
     nav {
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
-      border-bottom: 1px solid #00ff99;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 40px;
-      z-index: 1000;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      padding: 10px 20px;
+      border-bottom-left-radius: 10px;
+      z-index: 999;
     }
 
-    .social-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      align-items: flex-start;
-    }
-
-    .social-buttons a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #fff;
-      font-weight: bold;
-      padding: 6px 12px;
-      border-radius: 6px;
+    nav a {
+      margin: 0 10px;
       text-decoration: none;
-      font-size: 0.9em;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .social-buttons a:hover {
-      transform: scale(1.05);
-    }
-
-    .social-facebook { background-color: #1877F2; }
-    .social-instagram { background: linear-gradient(45deg, #E4405F, #FCAF45); }
-    .social-whatsapp { background-color: #25D366; }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #fff;
+      color: #00ff99;
       font-weight: bold;
-      font-size: 1.1em;
       transition: color 0.3s;
     }
 
-    .nav-links a:hover {
-      color: #00ff99;
+    nav a:hover {
+      color: #fff;
     }
 
-    /* ---------- CONTEÚDO ---------- */
+    /* ===================== REDES SOCIAIS ===================== */
+    .social-sidebar {
+      position: fixed;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 1000;
+    }
+
+    .social-sidebar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .social-sidebar a:hover {
+      transform: scale(1.15);
+      opacity: 0.8;
+    }
+
+    .facebook { background-color: #1877f2; }
+    .instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+    .whatsapp { background-color: #25d366; }
+
+    /* ===================== CABEÇALHO ===================== */
     header {
-      padding: 140px 20px 40px; /* compensar o menu fixo */
+      padding: 100px 20px 40px;
     }
 
     header img {
@@ -98,6 +95,7 @@
       color: #ccc;
     }
 
+    /* ===================== SERVIÇOS ===================== */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -125,7 +123,7 @@
       margin-bottom: 15px;
     }
 
-    /* ---------- AVALIAÇÕES ---------- */
+    /* ===================== REVIEW ===================== */
     .review-section {
       margin: 50px 20px;
     }
@@ -139,10 +137,6 @@
       max-width: 600px;
       color: #ccc;
       text-align: left;
-    }
-
-    .review strong {
-      color: #00ff99;
     }
 
     .review-button {
@@ -161,7 +155,7 @@
       background-color: #00995c;
     }
 
-    /* ---------- FAQ ---------- */
+    /* ===================== FAQ ===================== */
     .faq-section {
       padding: 50px 20px;
       background-color: #0a0a0a;
@@ -171,11 +165,6 @@
       color: #0f0;
       font-size: 2rem;
       margin-bottom: 10px;
-    }
-
-    .faq-section p {
-      color: #ccc;
-      margin-bottom: 30px;
     }
 
     .faq-container {
@@ -199,175 +188,127 @@
       transform: translateY(-2px);
     }
 
-    .faq-item.open {
-      background-color: #163a24;
-    }
-
-    .faq-question {
-      font-size: 1.1em;
-      font-weight: bold;
-      color: #00ff99;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .faq-item.open .faq-answer {
+      display: block;
     }
 
     .faq-answer {
       display: none;
       margin-top: 10px;
       line-height: 1.6;
-      font-size: 1em;
       color: #ccc;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 10px;
     }
 
-    .faq-item.open .faq-answer {
-      display: block;
+    /* ===================== BOTÃO SCROLL UP ===================== */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #00ff99;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 0 15px #00ff99;
+      transition: background 0.3s, transform 0.3s;
+      z-index: 1001;
     }
 
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 10px;
-    }
-
-    .final-message {
-      margin: 40px 20px;
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #00ff99;
+    #scrollTopBtn:hover {
+      background-color: #00cc77;
+      transform: scale(1.1);
     }
   </style>
 </head>
 
 <body>
-  <!-- MENU FIXO -->
+  <!-- Menu Superior -->
   <nav>
-    <div class="social-buttons">
-      <a href="https://www.facebook.com/profile.php?id=61569207737432" target="_blank" class="social-facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
-      <a href="https://www.instagram.com/arsenontechrs" target="_blank" class="social-instagram"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://wa.me/5551990124816" target="_blank" class="social-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-    </div>
-
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#services">Serviços</a>
-      <a href="#location">Localização</a>
-      <a href="#faq">FAQ</a>
-    </div>
+    <a href="#home">Home</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#faq">FAQ</a>
   </nav>
 
-  <!-- CONTEÚDO -->
+  <!-- Redes Sociais -->
+  <div class="social-sidebar">
+    <a href="https://www.facebook.com/profile.php?id=61569207737432" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/arsenontechrs" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/5551990124816" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <!-- Home -->
   <header id="home">
     <img src="https://i.imgur.com/FZ769Ao.png" alt="Logo ArsenonTech">
     <h1>ArsenonTech</h1>
     <p>Manutenção, conserto e serviços de informática em geral</p>
   </header>
 
-  <section id="services" class="services">
-    <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20manutenção%20preventiva%20no%20meu%20computador." target="_blank">
-      <div class="service">
-        <img src="https://i.imgur.com/US39VGf.jpeg">
-        <h3>🛠️ Manutenção Preventiva</h3>
-        <p>Combate problemas causados pelo tempo de uso, melhora o desempenho e aumenta a vida útil do equipamento.</p>
-      </div>
-    </a>
+  <!-- Serviços -->
+  <section id="servicos" class="services">
+    <div class="service">
+      <img src="https://i.imgur.com/US39VGf.jpeg" loading="lazy">
+      <h3>🛠️ Manutenção Preventiva</h3>
+      <p>Combate problemas causados pelo tempo de uso, melhora o desempenho e aumenta a vida útil do equipamento.</p>
+    </div>
 
-    <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20informações%20sobre%20troca%20de%20componentes%20no%20meu%20PC." target="_blank">
-      <div class="service">
-        <img src="https://i.imgur.com/KK0zg2G.png" alt="Troca de Componentes">
-        <h3>🔧 Troca de Componentes</h3>
-        <p>Substituímos peças danificadas de forma segura, restaurando o funcionamento ideal do seu computador.</p>
-      </div>
-    </a>
+    <div class="service">
+      <img src="https://i.imgur.com/KK0zg2G.png" alt="Troca de Componentes" loading="lazy">
+      <h3>🔧 Troca de Componentes</h3>
+      <p>Substituímos peças danificadas de forma segura, restaurando o funcionamento ideal do seu computador.</p>
+    </div>
 
-    <a href="https://wa.me/5551990124816?text=Olá!%20Gostaria%20de%20fazer%20um%20upgrade%20de%20desempenho%20no%20meu%20PC.%20Podem%20me%20ajudar?" target="_blank">
-      <div class="service">
-        <img src="https://i.imgur.com/LPqYVP2.png" alt="Upgrade de Desempenho">
-        <h3>🚀 Upgrade de Desempenho</h3>
-        <p>Aumente a potência e a velocidade do seu computador com upgrades de hardware sob medida.</p>
-      </div>
-    </a>
+    <div class="service">
+      <img src="https://i.imgur.com/LPqYVP2.png" alt="Upgrade de Desempenho" loading="lazy">
+      <h3>🚀 Upgrade de Desempenho</h3>
+      <p>Aumente a potência e a velocidade do seu computador com upgrades de hardware sob medida.</p>
+    </div>
 
-    <a href="https://wa.me/5551990124816?text=Olá!%20Preciso%20de%20suporte%20remoto%20para%20resolver%20problemas%20no%20meu%20computador." target="_blank">
-      <div class="service">
-        <img src="https://i.imgur.com/cC0NTHy.png" alt="Suporte Remoto">
-        <h3>💻 Suporte Remoto</h3>
-        <p>Resolvemos lentidão, travamentos, vírus e outros problemas de forma rápida, segura e à distância via AnyDesk.</p>
-      </div>
-    </a>
-  </section>
-
-  <section class="review-section">
-    <h2 style="color:#0f0;">⭐ Avaliações de Clientes</h2>
-    <div id="reviews" style="margin: 20px auto; max-width: 600px; font-size: 1.2em; color: #ccc;"></div>
-    <a href="https://www.google.com/search?q=ArsenonTech+Coment%C3%A1rios" target="_blank" class="review-button">Ver todas as avaliações</a>
-  </section>
-
-  <h2 id="location" style="color:#0f0;">📍 Localização</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d870.4156933531792!2d-51.1806!3d-30.0362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x2f4e0f061dcaef8e!2sArsenonTech!5e0!3m2!1spt-BR!2sbr!4v1721140000000" allowfullscreen="" loading="lazy"></iframe>
-
-  <section id="faq" class="faq-section">
-    <h2>❓ FAQ</h2>
-    <p>Perguntas Frequentes</p>
-
-    <div class="faq-container">
-      <div class="faq-item">
-        <div class="faq-question">Vocês consertam todo tipo de notebook ou PC?</div>
-        <div class="faq-answer">Sim. Atendemos todas as marcas de notebooks e computadores, incluindo PCs Gamer, com diagnóstico especializado.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Quanto tempo leva o conserto?</div>
-        <div class="faq-answer">Buscamos sempre combinar agilidade com qualidade. Cada serviço tem suas particularidades e prazos diferentes. Não confie em assistências que prometem resolver tudo em “20 minutos”.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Os serviços têm garantia?</div>
-        <div class="faq-answer">Sim, todos os serviços possuem garantia de 7 dias.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">É preciso agendar?</div>
-        <div class="faq-answer">Sim. Os atendimentos são realizados mediante agendamento pelo nosso WhatsApp ou Instagram.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Como saber se o computador precisa de limpeza?</div>
-        <div class="faq-answer">Se o computador estiver esquentando demais, com ventoinhas barulhentas, lentidão repentina ou desligando sozinho, são sinais claros de acúmulo de poeira ou pasta térmica ressecada.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question">Formas de pagamento?</div>
-        <div class="faq-answer">Aceitamos Dinheiro, PIX e Cartões de crédito ou débito.</div>
-      </div>
+    <div class="service">
+      <img src="https://i.imgur.com/cC0NTHy.png" alt="Suporte Remoto" loading="lazy">
+      <h3>💻 Suporte Remoto</h3>
+      <p>Resolvemos lentidão, travamentos, vírus e outros problemas de forma rápida, segura e à distância via AnyDesk.</p>
     </div>
   </section>
 
-  <div class="final-message">Pra qualquer "problema" existe uma solução, consulte-nos!</div>
+  <!-- Localização -->
+  <section id="localizacao">
+    <h2 style="color:#0f0;">📍 Localização</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d870.4156933531792!2d-51.1806!3d-30.0362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x2f4e0f061dcaef8e!2sArsenonTech!5e0!3m2!1spt-BR!2sbr!4v1721140000000" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq-section">
+    <h2>❓ FAQ</h2>
+    <div class="faq-container">
+      <div class="faq-item"><div class="faq-question">Vocês consertam todo tipo de notebook ou PC?</div><div class="faq-answer">Sim, todas as marcas, incluindo PCs Gamer.</div></div>
+      <div class="faq-item"><div class="faq-question">Quanto tempo leva o conserto?</div><div class="faq-answer">Depende do tipo de serviço, priorizamos agilidade com qualidade.</div></div>
+      <div class="faq-item"><div class="faq-question">Os serviços têm garantia?</div><div class="faq-answer">Sim, todos com garantia de 7 dias.</div></div>
+    </div>
+  </section>
+
+  <!-- Botão Scroll Up -->
+  <button id="scrollTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
 
   <script>
+    // FAQ toggle
     document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', () => {
-        item.classList.toggle('open');
-      });
+      item.addEventListener('click', () => item.classList.toggle('open'));
     });
 
-    const reviews = [
-      "Excelente atendimento!",
-      "Resolveram tudo à distância e super rápido.",
-      "Serviço de confiança e qualidade."
-    ];
-    let reviewIndex = 0;
-    const reviewDiv = document.getElementById("reviews");
-    function showNextReview() {
-      reviewDiv.textContent = reviews[reviewIndex];
-      reviewIndex = (reviewIndex + 1) % reviews.length;
-    }
-    showNextReview();
-    setInterval(showNextReview, 3000);
+    // Botão de rolar pra cima
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) scrollTopBtn.style.display = 'flex';
+      else scrollTopBtn.style.display = 'none';
+    });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
