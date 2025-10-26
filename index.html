@@ -282,52 +282,67 @@
 
     /* ======= RESPONSIVO ======= */
     @media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 60px; /* Fica logo abaixo do botão */
-    right: 15px;
-    background-color: rgba(0, 0, 0, 0.95);
-    border: 1px solid #00ff99;
-    border-radius: 12px;
-    padding: 10px 0;
-    z-index: 999;
-    gap: 15px;
-    width: 200px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-15px);
-    transition: all 0.3s ease-in-out;
-  }
+      /* ===== MENU MOBILE ===== */
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        top: 70px; /* mais abaixo do botão */
+        right: 15px;
+        background-color: rgba(0, 0, 0, 0.85);
+        border: none; /* sem moldura */
+        border-radius: 10px;
+        padding: 8px 0;
+        z-index: 999;
+        gap: 12px;
+        width: 160px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-15px);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 10px rgba(0, 255, 153, 0.15);
+      }
 
-  nav.show {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
+      nav.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
 
-  nav a {
-    padding: 8px 12px;
-    font-size: 1em;
-  }
+      nav a {
+        padding: 6px 10px;
+        font-size: 1em;
+        color: #00ff99;
+        text-align: right;
+      }
 
-  .menu-toggle {
-    display: block;
-  }
+      nav a:hover {
+        color: #fff;
+      }
 
-  .social-fixed {
-    left: 8px;
-    gap: 10px;
-  }
+      .menu-toggle {
+        display: block;
+      }
 
-  .social-fixed a {
-    font-size: 1.2em;
-    width: 34px;
-    height: 34px;
-  }
-}
+      .social-fixed {
+        left: 8px;
+        gap: 10px;
+      }
+
+      .social-fixed a {
+        font-size: 1.2em;
+        width: 34px;
+        height: 34px;
+      }
+
+      .social-fixed a:focus,
+      .social-fixed a:active {
+        outline: none;
+        transform: none;
+        box-shadow: none;
+      }
+    }
   </style>
 </head>
 
