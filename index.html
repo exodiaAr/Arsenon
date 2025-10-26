@@ -49,11 +49,14 @@
       padding: 8px 16px;
       z-index: 1000;
       backdrop-filter: blur(4px);
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
     }
 
     nav a {
       color: #00ff99;
-      margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
@@ -281,13 +284,20 @@
     @media (max-width: 768px) {
       nav {
         display: none;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.85);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         position: fixed;
-        top: 60px;
-        right: 15px;
-        border-radius: 10px;
-        padding: 10px 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        border: none;
+        border-bottom: 2px solid #00ff99;
+        border-radius: 0;
+        padding: 12px 0;
+        z-index: 999;
+        gap: 20px;
       }
 
       nav.show {
@@ -295,8 +305,8 @@
       }
 
       nav a {
-        padding: 10px 20px;
-        display: block;
+        padding: 8px 10px;
+        font-size: 1em;
       }
 
       .menu-toggle {
@@ -405,7 +415,7 @@
 
       <div class="faq-item">
         <div class="faq-question">Quanto tempo leva o conserto?</div>
-        <div class="faq-answer">Buscamos sempre combinar agilidade com qualidade. Cada serviço tem suas particularidades e prazos diferentes. Não confie em assistências que prometem resolver tudo em “20 minutos”.</div>
+        <div class="faq-answer">Buscamos sempre combinar agilidade com qualidade. Cada serviço tem suas particularidades e prazos diferentes.</div>
       </div>
 
       <div class="faq-item">
@@ -423,7 +433,7 @@
 
       <div class="faq-item">
         <div class="faq-question">Como saber se o computador precisa de limpeza?</div>
-        <div class="faq-answer">Se o computador estiver esquentando demais, com ventoinhas barulhentas, lentidão repentina ou desligando sozinho, são sinais claros de acúmulo de poeira ou pasta térmica ressecada. A limpeza preventiva evita danos e melhora o desempenho térmico.</div>
+        <div class="faq-answer">Se o computador estiver esquentando demais, com ventoinhas barulhentas ou lentidão repentina, é hora da limpeza preventiva.</div>
       </div>
 
       <div class="faq-item">
