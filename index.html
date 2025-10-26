@@ -282,48 +282,52 @@
 
     /* ======= RESPONSIVO ======= */
     @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.95);
-        border: none;
-        border-bottom: 2px solid #00ff99;
-        border-radius: 0;
-        padding: 12px 0;
-        z-index: 999;
-        gap: 20px;
-      }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 60px; /* Fica logo abaixo do botão */
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid #00ff99;
+    border-radius: 12px;
+    padding: 10px 0;
+    z-index: 999;
+    gap: 15px;
+    width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-15px);
+    transition: all 0.3s ease-in-out;
+  }
 
-      nav.show {
-        display: flex;
-      }
+  nav.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
 
-      nav a {
-        padding: 8px 10px;
-        font-size: 1em;
-      }
+  nav a {
+    padding: 8px 12px;
+    font-size: 1em;
+  }
 
-      .menu-toggle {
-        display: block;
-      }
+  .menu-toggle {
+    display: block;
+  }
 
-      .social-fixed {
-        left: 8px;
-        gap: 10px;
-      }
+  .social-fixed {
+    left: 8px;
+    gap: 10px;
+  }
 
-      .social-fixed a {
-        font-size: 1.2em;
-        width: 34px;
-        height: 34px;
-      }
-    }
+  .social-fixed a {
+    font-size: 1.2em;
+    width: 34px;
+    height: 34px;
+  }
+}
   </style>
 </head>
 
